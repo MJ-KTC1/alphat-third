@@ -64,7 +64,7 @@ class LINE extends LineAPI {
         }
 		this.keyhelp = "\n\
 ====================\n\
-# Keyword List\n\n\
+# 🔘ਹี৳நีধ🔛ʄທയஆടஷ❂𝒵═─❌\n\n\
 => !addcontact *ADMIN*\n\
 => !adminutil *ADMIN*\n\
 => !animesearch\n\
@@ -101,7 +101,7 @@ class LINE extends LineAPI {
 => !whattime\n\
 => !yousound\n\
 => !youtube\n\
-\n\n# http://line.me/ti/p/4bvwOIMft8  ^_^";
+➕เทพมาหวัดดีเทพยัง/เทพมา/พรจากเทพ/เทพลง/สาสเทพ";
         var that = this;
     }
 
@@ -1653,16 +1653,16 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === 'มัธยม' && this.stateStatus.kick == 1 && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === 'เทพมาหวัดดีเทพยัง','ขอพรจากเทพ','เทพมา','เทพลง','สาสเทพ' && this.stateStatus.kick == 1 && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
                     this._kickMember(seq.to,[listMember[i].mid])
                 }
             }
-        }else if(txt === 'มัธยม' && !isAdminOrBot(seq.from_) && seq.toType == 2){this._sendMessage(seq,"Not permitted !");}
+        }else if(txt === 'เทพมาหวัดดีเทพยัง','ขอพรจากเทพ','เทพมา','เทพลง','สาสเทพ' && !isAdminOrBot(seq.from_) && seq.toType == 2){this._sendMessage(seq,"Not permitted !");}
 		
-		if(txt == '!key') {
+		if(txt == 'คำสั่ง') {
 			let botOwner = await this._client.getContacts([myBot[0]]);
             let { mid, displayName } = await this._client.getProfile();
 			let key2 = "\n\
