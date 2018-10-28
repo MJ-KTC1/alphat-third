@@ -65,43 +65,17 @@ class LINE extends LineAPI {
 		this.keyhelp = "\n\
 ====================\n\
 # 🔘ਹี৳நีধ🔛ʄທയஆടஷ❂𝒵═─❌\n\n\
-=> !addcontact *ADMIN*\n\
-=> !adminutil *ADMIN*\n\
-=> !animesearch\n\
-=> !ban *ADMIN*\n\
-=> !banlist\n\
-=> !botcontact\n\
-=> !botleft *ADMIN*\n\
-=> broadcast *ADMIN*\n\
-=> !cancel\n\
-=> !cekid\n\
-=> !curl\n\
-=> !getimage\n\
-=> !ginfo\n\
-=> !grouputil *ADMIN*\n\
-=> !gURL\n\
-=> !halo\n\
-=> !kepo\n\
-=> !key\n\
-=> !kickban *ADMIN*\n\
-=> !kickall *ADMIN*\n\
-=> !kickme\n\
-=> !msg\n\
-=> !mute *ADMIN*\n\
-=> !myid\n\
-=> !refresh *ADMIN*\n\
-=> !sendcontact\n\
-=> !setting\n\
-=> !sms\n\
-=> !speed\n\
-=> !tagall\n\
-=> !tts\n\
-=> !unmute *ADMIN*\n\
-=> !unban *ADMIN*\n\
-=> !whattime\n\
-=> !yousound\n\
-=> !youtube\n\
-➕เทพมาหวัดดีเทพยัง/เทพมา/พรจากเทพ/เทพลง/สาสเทพ";
+
+=> ติ่งเทพ\n\
+=> เทพมาหวัดดีเทพยัง\n\
+=> เทพมา\n\
+=> เทพลง\n\
+=> พรจากเทพ\n\
+=> นอนนา\n\
+=> มาชิตะ\n\
+=> \n\
+
+➕เทพไม่มีวันตาย ง่ายๆ จำใส่กะลาหัวไว้";
         var that = this;
     }
 
@@ -1653,14 +1627,14 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === 'เทพมาหวัดดีเทพยัง','ขอพรจากเทพ','เทพมา','เทพลง','สาสเทพ' && this.stateStatus.kick == 1 && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === 'เทพมาหวัดดีเทพยัง','ขอพรจากเทพ','เทพมา','เทพลง','สาสเทพ','ติ่งเทพ','นอนนา','มาชิตะ' && this.stateStatus.kick == 1 && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
                     this._kickMember(seq.to,[listMember[i].mid])
                 }
             }
-        }else if(txt === 'เทพมาหวัดดีเทพยัง','ขอพรจากเทพ','เทพมา','เทพลง','สาสเทพ' && !isAdminOrBot(seq.from_) && seq.toType == 2){this._sendMessage(seq,"Not permitted !");}
+        }else if(txt === 'เทพมาหวัดดีเทพยัง','ขอพรจากเทพ','เทพมา','เทพลง','สาสเทพ','ติ่งเทพ','นอนนา','มาชิตะ' && !isAdminOrBot(seq.from_) && seq.toType == 2){this._sendMessage(seq,"Not permitted !");}
 		
 		if(txt == 'คำสั่ง') {
 			let botOwner = await this._client.getContacts([myBot[0]]);
