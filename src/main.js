@@ -1639,7 +1639,7 @@ Link Download: "+idU.id+"\n";
             this._sendMessage(seq, xtime+' second');
         }else if(sp.includes(txt) && isBanned(banList, seq.from_)){this._sendMessage(seq,"Not permitted !");}
 		
-        if(txt == 'สปีด' && !isBanned(banList, seq.from_)) {
+        if(txt == 'สปีด.' && !isBanned(banList, seq.from_)) {
 			const curTime = Math.floor(Date.now() / 1000);let M = new Message();M.to=seq.to;M.text = '';M.contentType = 1;M.contentPreview = null;M.contentMetadata = null;
 			await this._client.sendMessage(0,M);
 			const rtime = Math.floor(Date.now() / 1000);
